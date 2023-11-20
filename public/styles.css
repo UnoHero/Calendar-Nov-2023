@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.kalender {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 days in a week */
+    gap: 5px;
+    justify-content: center;
+}
+
+.dag {
+    background-color: #4c8baf;
+    color: white;
+    padding: 10px;
+    padding-left: 37px;
+}
+
+.dato {
+    background-color: #00c8fa;
+    padding: 20px;
+    border: 1px solid #ddd;
+    padding-left: 4rem;
+}
+
+.dato:hover {
+    background-color: #4CAF50; 
+    color: white; 
+}
+
+.main {
+    padding: 30px;
+    background-color: #f8f8f8;
+    border: 1px solid #e7e7e7;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    justify-content: center;
+    overflow: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header{
+    width: 100%;
+    height: 130px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+
+}
+
+.header h1{
+    font-size: 60px;
+    margin-top: 60px;
+    color: #4c8baf;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    text-align: center;
+
+}
+
