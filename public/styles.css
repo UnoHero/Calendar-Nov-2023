@@ -104,6 +104,11 @@ body, html {
     color: #aaa;
 }
 
+a{
+    text-decoration: none;
+    color: black;
+}
+
 @media (max-width: 600px) {
     .calendar {
         width: 100%;
