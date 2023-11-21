@@ -17,12 +17,12 @@ app.set("view engine", "ejs");
 
 // routes
 app.get('/', (req, res) => {
-    res.redirect('/february');
-  });
+  res.redirect('/february');
+});
 
 app.get("/february", (req, res) => {
   res.render("index");
-  })
+})
   
 app.get(`/february/:day`, (req, res) => {
   const day = parseInt(req.params.day);

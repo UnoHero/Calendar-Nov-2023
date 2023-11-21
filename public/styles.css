@@ -5,10 +5,11 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image: url('/bilder/icegif-47.gif'); 
+    background-image: url('icegif-47.gif'); 
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
+    overflow-y: hidden;
 }
 
 
@@ -30,6 +31,19 @@ body, html {
     top: 0;
     left: 0;
     z-index: 1000;
+    max-height: 5%;
+}
+
+img {
+    float:left;
+    margin: 0;
+    padding: 0;
+    margin-left:5% ;
+}
+
+h1{
+    font-size: 1000%;
+    margin-top: 5%;
 }
 
 .calendar {
