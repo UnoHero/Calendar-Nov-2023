@@ -1,65 +1,139 @@
 body {
-    font-family: Arial, sans-serif;
-}
-
-.kalender {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr); /* 7 days in a week */
-    gap: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('/bilder/icegif-47.gif'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
 }
 
-.dag {
-    background-color: #4c8baf;
-    color: white;
-    padding: 10px;
-    padding-left: 37px;
+
+body, html {
+    height: 100%;
+    margin: 0;
+    
 }
 
-.dato {
-    background-color: #00c8fa;
-    padding: 20px;
-    border: 1px solid #ddd;
-    padding-left: 4rem;
-}
-
-.dato:hover {
-    background-color: #4CAF50; 
-    color: white; 
-}
-
-.main {
-    padding: 30px;
-    background-color: #f8f8f8;
-    border: 1px solid #e7e7e7;
-    margin: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    justify-content: center;
-    overflow: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.header{
-    width: 100%;
-    height: 130px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
-
-}
-
-.header h1{
-    font-size: 60px;
-    margin-top: 60px;
-    color: #4c8baf;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: auto;
+.header {
     text-align: center;
-
+    font-size: 40px;
+    color: #333;
+    padding: 20px 0;
+    background-color: #fff;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
+
+.calendar {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 80px; 
+    padding: 20px; 
+}
+
+.calendar-container {
+    width: 100%;
+    max-width: 800px; 
+    margin: auto;
+    padding-bottom: 40px; 
+    
+}
+
+.month {
+    font-size: 36px; 
+    padding: 30px 0; 
+    background-color: #4a69bd;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+    font-weight: 600;
+    border-bottom: 3px solid #3c6382;}
+
+.weekdays, .days {
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.weekdays div, .days .day {
+    padding: 20px 0; 
+    font-size: 20px; 
+}
+
+.weekdays {
+    background-color: #f8f9fa;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    padding: 15px 0;
+    font-weight: bold;
+    color: #3c6382;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+}
+
+.day {
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+.day:hover {
+    background-color: #4a69bd;
+    color: white;
+}
+
+.day.other-month {
+    color: #aaa;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+@media (max-width: 600px) {
+    .calendar {
+        width: 100%;
+        max-width: none;
+        border-radius: 0;
+    }
+}
+
+footer {
+    padding: 50px 0;
+    background: var(--header_background); 
+    color: var(--primary-medium); 
+    text-align: center; 
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+    padding: 15px 0;
+    background-color: #f8f9fa;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    bottom: 0;
+    width: 100%;
+}
+
 
