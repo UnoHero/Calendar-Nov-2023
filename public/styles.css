@@ -5,12 +5,17 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: none;
+    background-image: url('/bilder/icegif-47.gif'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
 }
+
 
 body, html {
     height: 100%;
     margin: 0;
+    
 }
 
 .header {
@@ -41,9 +46,10 @@ body, html {
 
 .calendar-container {
     width: 100%;
-    max-width: 800px; /* Samme maksimumsbredde som kalenderen */
+    max-width: 800px; 
     margin: auto;
-    padding-bottom: 40px; /* Gir plass til footer */
+    padding-bottom: 40px; 
+    
 }
 
 .month {
@@ -108,9 +114,9 @@ body, html {
 
 footer {
     padding: 50px 0;
-    background: var(--header_background);  /* optional */
-    color: var(--primary-medium); /* optional */
-    text-align: center; /* optional */
+    background: var(--header_background); 
+    color: var(--primary-medium); 
+    text-align: center; 
     position: absolute;
     bottom: 0;
     width: 100%;
