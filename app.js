@@ -17,20 +17,20 @@ app.set("view engine", "ejs");
 
 // routes
 app.get('/', (req, res) => {
-  res.redirect('/february');
+  res.redirect('/november');
 });
 
-app.get("/february", (req, res) => {
+app.get("/november", (req, res) => {
   res.render("index");
 })
   
-app.get(`/february/:day`, (req, res) => {
+app.get(`/november/:day`, (req, res) => {
   const day = parseInt(req.params.day);
   console.log(day);
-  res.sendFile("content.html", {root: `2025/February/${day}.` })
+  res.sendFile("content.html", {root: `2023/November/${day}.` })
 })
 
 // 404 page
 app.use((req, res) => {
-    res.status(404).render("404", {title: "404"});
+  res.status(404).render("404", {title: "404"});
 });
