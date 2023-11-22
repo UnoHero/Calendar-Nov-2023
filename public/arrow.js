@@ -17,10 +17,14 @@ document.addEventListener('keydown', function(e) {
   let currentNumericDate = parseInt(currentDate, 10);
 
   if (e.key === 'ArrowLeft') {
-    // Simulate moving to the previous date
-    currentNumericDate -= 1;
+    if (window.location.pathname === "/november") {
+      return;
+    } else {
+      currentNumericDate -= 1;
     console.log(currentNumericDate);
-  } else if (e.key === 'ArrowRight') {
+    }
+  }
+  if (e.key === 'ArrowRight') {
     // Simulate moving to the next date
     currentNumericDate += 1;
     console.log(currentNumericDate);
