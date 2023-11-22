@@ -37,16 +37,26 @@ let list = [link1, link2, link3, link4, link5, link6, link7, link8, link9, link1
 
 list.forEach(element => {
   if (element.innerText > date) {
-    element.style.color = "red"
+    element.style.background = "#ddd"
 
   } 
   if (element.innerText == date) {
-    element.style.background = "lightgreen"
+    element.style.background = "#afa"
 
   } 
 });
 
+let sun = [link5, link12, link19, link26]
 
+sun.forEach(element => {
+  element.style.color = "red"
+})
+
+let sat = [link4, link11, link18, link25]
+
+sat.forEach(element => {
+  element.style.color = "#666"
+})
 // date restricted
 
 document.addEventListener('DOMContentLoaded', function () {
