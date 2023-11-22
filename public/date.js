@@ -1,3 +1,5 @@
+ // the code that locks dates and does coloring of the calender overvjue
+ 
  // Get links by their IDs
  var link1 = document.getElementById('link1');
  var link2 = document.getElementById('link2');
@@ -32,32 +34,42 @@
 
 
 //locked date colors
-let date = parseInt(new Date().toISOString().split('-')[2].split('T')[0], 10); // Convert today to a number
+// Convert today to a number
+let date = parseInt(new Date().toISOString().split('-')[2].split('T')[0], 10); 
+// list is an aray that holds all the days in the calender
 let list = [link1, link2, link3, link4, link5, link6, link7, link8, link9, link10, link11, link12, link13, link14, link15, link16, link17, link18, link19, link20, link21, link22, link23, link24, link25, link26, link27, link28, link29, link30]
 
+// this forEach looks first for the dates that have not yeat been and gives them a light gray background color. Then it also finds Today and gives it a light Green Background color.
 list.forEach(element => {
+  //the days that have not yet been
   if (element.innerText > date) {
     element.style.background = "#ddd"
 
   } 
+  // Today
   if (element.innerText == date) {
     element.style.background = "#afa"
 
   } 
 });
 
+//an array of all the saturdays in november
+let sat = [link4, link11, link18, link25]
+
+// makes all the saturdays in november litle gray.
+sat.forEach(element => {
+  element.style.color = "#666"
+})
+
+// an array of all the sundays in november
 let sun = [link5, link12, link19, link26]
 
+// makes all the sundays in november red
 sun.forEach(element => {
   element.style.color = "red"
 })
 
-let sat = [link4, link11, link18, link25]
-
-sat.forEach(element => {
-  element.style.color = "#666"
-})
-// date restricted
+// date restricted/locked
 
 document.addEventListener('DOMContentLoaded', function () {
   // Get today's date in the format 'YYYY-MM-DD'

@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- This is ejs for importing code. in this instence we get the head code from partials/head. -->
     <%- include('./partials/head.ejs')  %>
+
 </head>
 <body>
+
     <header class="header">
+        <!-- this placeholder image is from a readly nice website witch gives you placeholders. the number on the end of the src link is the size of the img, witch can be ennything.-->
         <a href="/"><img src="https://placehold.co/75" alt="Logo / path home"></a>
         Kalender <strong>2023</strong>
     </header>
@@ -12,12 +16,8 @@
     <div>
         <h1>404</h1>
     </div>
-    <div>
+    <!--This is ejs for importing code. in this instence we import the footer to the page -->
+    <%- include('./partials/footer.ejs')  %>
 
-    </div>
-
-    <footer>
-        <p>&#169; Mohamad, Mrtin, Henrik, Scott,  All Right Reserved</p>
-    </footer>
 </body>
 </html>

@@ -1,1 +1,2 @@
+# this does so the node_modules foder does not get uploaded to github. 
 node_modules/
