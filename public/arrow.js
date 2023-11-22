@@ -2,10 +2,9 @@ let currentPath = window.location.pathname;
 let pathParts = currentPath.split('/');
 let monthIndex = pathParts.indexOf('november');
 let currentDateIndex = monthIndex + 1; // Index of the date in the path
-let today = new Date().toISOString().split('-')[2].split('T')[0];
+let today = parseInt(new Date().toISOString().split('-')[2].split('T')[0], 10); // Convert today to a number
 
-
-let currentDate = getCurrentDate();
+let currentDate = parseInt(getCurrentDate(), 10); // Convert currentDate to a number
 document.addEventListener('keydown', function(e) {
   
   //Event listener for returning to the home page
@@ -31,7 +30,7 @@ document.addEventListener('keydown', function(e) {
   window.location.assign(`/november/${currentNumericDate}`);
 });
 
-// locking movment from date to locked date
+// Locking movement from date to locked date
 if (currentDate > today) {
   console.log(today);
   window.location.replace(`/november/${today}`);
