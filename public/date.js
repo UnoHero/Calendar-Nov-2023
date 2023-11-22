@@ -1,40 +1,59 @@
+ // Get links by their IDs
+ var link1 = document.getElementById('link1');
+ var link2 = document.getElementById('link2');
+ var link3 = document.getElementById('link3');
+ var link4 = document.getElementById('link4');
+ var link5 = document.getElementById('link5');
+ var link6 = document.getElementById('link6');
+ var link7 = document.getElementById('link7');
+ var link8 = document.getElementById('link8');
+ var link9 = document.getElementById('link9');
+ var link10 = document.getElementById('link10');
+ var link11 = document.getElementById('link11');
+ var link12 = document.getElementById('link12');
+ var link13 = document.getElementById('link13');
+ var link14 = document.getElementById('link14');
+ var link15 = document.getElementById('link15');
+ var link16 = document.getElementById('link16');
+ var link17 = document.getElementById('link17');
+ var link18 = document.getElementById('link18');
+ var link19 = document.getElementById('link19');
+ var link20 = document.getElementById('link20');
+ var link21 = document.getElementById('link21');
+ var link22 = document.getElementById('link22');
+ var link23 = document.getElementById('link23');
+ var link24 = document.getElementById('link24');
+ var link25 = document.getElementById('link25');
+ var link26 = document.getElementById('link26');
+ var link27 = document.getElementById('link27');
+ var link28 = document.getElementById('link28');
+ var link29 = document.getElementById('link29');
+ var link30 = document.getElementById('link30');
+
+
+//locked date colors
+let date = parseInt(new Date().toISOString().split('-')[2].split('T')[0], 10); // Convert today to a number
+let list = [link1, link2, link3, link4, link5, link6, link7, link8, link9, link10, link11, link12, link13, link14, link15, link16, link17, link18, link19, link20, link21, link22, link23, link24, link25, link26, link27, link28, link29, link30]
+
+list.forEach(element => {
+  if (element.innerText > date) {
+    element.style.color = "red"
+
+  } 
+  if (element.innerText == date) {
+    element.style.background = "lightgreen"
+
+  } 
+});
+
+
 // date restricted
 
 document.addEventListener('DOMContentLoaded', function () {
   // Get today's date in the format 'YYYY-MM-DD'
   var today = new Date().toISOString().split('T')[0];
 
-  // Get links by their IDs
-  var link1 = document.getElementById('link1');
-  var link2 = document.getElementById('link2');
-  var link3 = document.getElementById('link3');
-  var link4 = document.getElementById('link4');
-  var link5 = document.getElementById('link5');
-  var link6 = document.getElementById('link6');
-  var link7 = document.getElementById('link7');
-  var link8 = document.getElementById('link8');
-  var link9 = document.getElementById('link9');
-  var link10 = document.getElementById('link10');
-  var link11 = document.getElementById('link11');
-  var link12 = document.getElementById('link12');
-  var link13 = document.getElementById('link13');
-  var link14 = document.getElementById('link14');
-  var link15 = document.getElementById('link15');
-  var link16 = document.getElementById('link16');
-  var link17 = document.getElementById('link17');
-  var link18 = document.getElementById('link18');
-  var link19 = document.getElementById('link19');
-  var link20 = document.getElementById('link20');
-  var link21 = document.getElementById('link21');
-  var link22 = document.getElementById('link22');
-  var link23 = document.getElementById('link23');
-  var link24 = document.getElementById('link24');
-  var link25 = document.getElementById('link25');
-  var link26 = document.getElementById('link26');
-  var link27 = document.getElementById('link27');
-  var link28 = document.getElementById('link28');
-  var link29 = document.getElementById('link29');
-  var link30 = document.getElementById('link30');
+ 
 
   // Set the dates for each link
   var link1Date = '2023-11-1';
@@ -178,5 +197,4 @@ if (link30Date > today) {
   link30.setAttribute('href', '#');
 }
 });
-
 
