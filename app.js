@@ -2,7 +2,6 @@ require("dotenv").config()
 const express = require("express")
 
 
-
 const app = express()
 const port = process.env.PORT_MAIN;
 
@@ -35,9 +34,16 @@ app.get("/november/NaN", (req, res) => {
 app.get(`/november/:day`, (req, res) => {
   const day = parseInt(req.params.day);
   console.log(day);
-  res.sendFile("content.html", {root: `public/2023/November/${day}.` })
 
-})
+  if (isNaN(day)) {
+    // If day is not a number (i.e., it's NaN), render the 404 page
+    res.render("404");
+  } else {
+    // If day is a number, proceed with rendering the content
+    res.sendFile("content.html", { root: `public/2023/November/${day}` });
+  }
+});
+
 
 // 404 page
 app.use((req, res) => {
