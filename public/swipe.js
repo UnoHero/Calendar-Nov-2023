@@ -1,7 +1,3 @@
-// Global variables to store start and end positions
-let startX = 0;
-let endX = 0;
-
 // Function to handle the gesture
 function handleGesture() {
     const pathParts = window.location.pathname.split('/');
@@ -16,8 +12,13 @@ function handleGesture() {
         const nextPage = currentPageNumber + 1 <= 30 ? currentPageNumber + 1 : 1;
         window.location.pathname = `/november/${nextPage}`;
     } else if (endX > startX) { // Swiped right or mouse moved right
-        const prevPage = currentPageNumber - 1 >= 1 ? currentPageNumber - 1 : 30;
-        window.location.pathname = `/november/${prevPage}`;
+        if (currentPageNumber === 1) {
+            // Go back to the main page if on the first page
+            window.location.pathname = '/november'; // Adjust the path as per your main page's URL
+        } else {
+            const prevPage = currentPageNumber - 1;
+            window.location.pathname = `/november/${prevPage}`;
+        }
     }
 }
 
